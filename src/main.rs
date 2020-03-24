@@ -5,4 +5,7 @@ fn main() {
     println!("Please input your guess.")
 
     let mut guess = String::new();
+
+    io::stdin().readline(&mut guess)
+        .expect("Failed to red line")
 }
