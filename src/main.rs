@@ -2,10 +2,12 @@ use std::io;
 
 fn main() {
     println!("Guess the number!");
-    println!("Please input your guess.")
+    println!("Please input your guess.");
 
     let mut guess = String::new();
 
-    io::stdin().readline(&mut guess)
-        .expect("Failed to red line")
+    io::stdin().read_line(&mut guess)
+        .expect("Failed to read line");
+
+    println!("You guessed: {}", guess);
 }
